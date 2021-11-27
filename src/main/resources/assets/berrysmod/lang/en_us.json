@@ -1,0 +1,26 @@
+{
+
+  "block.berrysmod.copper_ore": "Copper Ore",
+  "block.berrysmod.copper_block": "Copper Block",
+  "item.berrysmod.copper_ingot": "Copper Ingot",
+  "item.berrysmod.raw_copper": "Raw Copper",
+  "item.berrysmod.copper_wire": "Copper Wire",
+
+  "block.berrysmod.tin_ore": "Tin Ore",
+  "block.berrysmod.tin_block": "Tin Block",
+  "item.berrysmod.tin_ingot": "Tin Ingot",
+  "item.berrysmod.raw_tin": "Raw Tin",
+
+  "item.berrysmod.steel_ingot": "Steel Ingot",
+
+  "item.berrysmod.iron_rod": "Iron Rod",
+
+  "block.berrysmod.basic_machine_casing": "Basing Machine Casing",
+  "block.berrysmod.crusher": "Crusher",
+  "item.berrysmod.circuit": "Circuit",
+  "item.berrysmod.wire_cutters": "Wire Cutters",
+
+
+  "itemGroup.berrysmod.berrysmod": "Berry's Mod"
+
+}
