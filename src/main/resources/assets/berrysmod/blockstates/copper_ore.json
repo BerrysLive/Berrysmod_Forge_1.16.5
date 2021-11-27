@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "berrysmod:block/copper_ore"
-    }
+    "": { "model": "berrysmod:block/copper_ore" }
   }
 }
