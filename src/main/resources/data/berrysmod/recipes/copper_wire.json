@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "berrysmod:copper_ingot"
+    },
+    {
+      "item":"berrysmod:wire_cutters"
+    }
+  ],
+  "result": {
+    "item": "berrysmod:copper_wire",
+    "count": 2
+  }
+}

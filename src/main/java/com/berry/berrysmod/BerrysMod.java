@@ -1,9 +1,13 @@
 package com.berry.berrysmod;
 
 import com.berry.berrysmod.block.ModBlocks;
+import com.berry.berrysmod.container.ModContainers;
 import com.berry.berrysmod.item.ModItems;
+import com.berry.berrysmod.screen.LightningChannelerScreen;
+import com.berry.berrysmod.tileentity.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,6 +40,8 @@ public class BerrysMod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -58,6 +64,7 @@ public class BerrysMod
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
+        ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -87,4 +94,5 @@ public class BerrysMod
             LOGGER.info("HELLO from Register Block");
         }
     }
+
 }

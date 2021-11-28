@@ -20,6 +20,8 @@
   "item.berrysmod.circuit": "Circuit",
   "item.berrysmod.wire_cutters": "Wire Cutters",
 
+  "block.berrysmod.lightning_channeler": "Lightning Channeler",
+  "screen.berrysmod.lightning_channeler": "Lightning Channeler",
 
   "itemGroup.BerrysMod": "Berry's Mod"
 

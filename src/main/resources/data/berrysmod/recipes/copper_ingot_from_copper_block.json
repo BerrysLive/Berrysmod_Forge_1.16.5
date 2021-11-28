@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "berrysmod:copper_block"
+    }
+  ],
+  "result": {
+    "item": "berrysmod:copper_ingot",
+    "count": 9
+  }
+}

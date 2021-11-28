@@ -1,6 +1,7 @@
 package com.berry.berrysmod.item;
 
 import com.berry.berrysmod.BerrysMod;
+import com.berry.berrysmod.item.custom.WireCutters;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,7 +41,7 @@ public class ModItems {
     //--------------------------------------------------------------------------------------------------------------------
     //Tools
     public static final RegistryObject<Item> WIRE_CUTTERS = ITEMS.register("wire_cutters",
-            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+            () -> new WireCutters(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP).maxDamage(64)));
     //--------------------------------------------------------------------------------------------------------------------
     //Machine Stuff
     public static final RegistryObject<Item> CIRCUIT = ITEMS.register("circuit",

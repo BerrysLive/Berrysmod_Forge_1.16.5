@@ -1,3 +1,5 @@
 {
-  "parent": "berrysmod:block/copper_block"
+  "variants": {
+    "": { "model": "berrysmod:block/copper_block" }
+  }
 }

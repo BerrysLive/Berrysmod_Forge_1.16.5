@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[
+    "YXY",
+    "Z#Z",
+    "YXY"
+  ],
+  "key": {
+    "#":{
+      "item": "berrysmod:copper_wire"
+    },
+    "X":{
+      "item": "berrysmod:iron_rod"
+    },
+    "Z":{
+      "item": "minecraft:redstone"
+    },
+    "Y":{
+      "item": "berrysmod:tin_ingot"
+    }
+  },
+  "result": {
+    "item": "berrysmod:basic_machine_casing"
+  }
+}

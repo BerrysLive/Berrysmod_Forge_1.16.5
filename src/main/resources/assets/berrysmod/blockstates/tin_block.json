@@ -1,3 +1,5 @@
 {
-  "parent": "berrysmod:block/tin_block"
+  "variants": {
+    "": { "model": "berrysmod:block/tin_block" }
+  }
 }

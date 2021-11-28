@@ -1,3 +1,5 @@
 {
-  "parent": "berrysmod:block/basic_machine_casing"
+  "variants": {
+    "": { "model": "berrysmod:block/basic_machine_casing" }
+  }
 }
