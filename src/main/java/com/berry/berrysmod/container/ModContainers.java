@@ -16,7 +16,16 @@ public class ModContainers {
 
     public static final RegistryObject<ContainerType<LightningChannelerContainer>> LIGHTNING_CHANNELER_CONTAINER =
             CONTAINERS.register("lightning_channeler_container", () -> IForgeContainerType.create(((windowId, inv,
-                data) -> {BlockPos pos = data.readBlockPos();
+                                                                                                    data) -> {
+                BlockPos pos = data.readBlockPos();
+                World world = inv.player.getEntityWorld();
+                return new LightningChannelerContainer(windowId, world, pos, inv, inv.player);
+            })));
+
+    public static final RegistryObject<ContainerType<LightningChannelerContainer>> CRUSHER_CONTAINER =
+            CONTAINERS.register("crusher_container", () -> IForgeContainerType.create(((windowId, inv,
+                                                                                        data) -> {
+                BlockPos pos = data.readBlockPos();
                 World world = inv.player.getEntityWorld();
                 return new LightningChannelerContainer(windowId, world, pos, inv, inv.player);
             })));

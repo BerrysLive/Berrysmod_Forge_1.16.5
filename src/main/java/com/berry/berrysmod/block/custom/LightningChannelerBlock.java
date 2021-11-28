@@ -5,7 +5,6 @@ import com.berry.berrysmod.tileentity.LightningChannelerTile;
 import com.berry.berrysmod.tileentity.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.player.PlayerEntity;

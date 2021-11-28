@@ -20,6 +20,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_COPPER = ITEMS.register("raw_copper",
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+    public static final RegistryObject<Item> COPPER_DUST = ITEMS.register("copper_dust",
+            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
 
     public static final RegistryObject<Item> COPPER_WIRE = ITEMS.register("copper_wire",
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
@@ -29,6 +31,8 @@ public class ModItems {
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
 
     public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin",
+            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+    public static final RegistryObject<Item> TIN_DUST = ITEMS.register("tin_dust",
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
     //--------------------------------------------------------------------------------------------------------------------
     //Steel

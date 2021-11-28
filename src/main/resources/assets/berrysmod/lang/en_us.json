@@ -4,12 +4,15 @@
   "block.berrysmod.copper_block": "Copper Block",
   "item.berrysmod.copper_ingot": "Copper Ingot",
   "item.berrysmod.raw_copper": "Raw Copper",
+  "item.berrysmod.copper_dust": "Copper Dust",
   "item.berrysmod.copper_wire": "Copper Wire",
 
   "block.berrysmod.tin_ore": "Tin Ore",
   "block.berrysmod.tin_block": "Tin Block",
   "item.berrysmod.tin_ingot": "Tin Ingot",
   "item.berrysmod.raw_tin": "Raw Tin",
+  "item.berrysmod.tin_dust": "Tin Dust",
+
 
   "item.berrysmod.steel_ingot": "Steel Ingot",
 
@@ -19,6 +22,9 @@
   "block.berrysmod.crusher": "Crusher",
   "item.berrysmod.circuit": "Circuit",
   "item.berrysmod.wire_cutters": "Wire Cutters",
+
+  "block.berrysmod.crusher": "Crusher",
+  "screen.berrysmod.crusher": "Crusher",
 
   "block.berrysmod.lightning_channeler": "Lightning Channeler",
   "screen.berrysmod.lightning_channeler": "Lightning Channeler",

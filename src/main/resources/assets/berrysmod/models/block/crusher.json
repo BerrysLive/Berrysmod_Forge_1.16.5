@@ -1,9 +1,9 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "top": "berrysmod:block/crusher_top",
-    "front": "berrysmod:block/crusher_front",
-    "side": "berrysmod:block/crusher_sides",
-    "bottom": "berrysmod:block/crusher_sides"
+    "front": "berrysmod:blocks/crusher_front",
+    "top": "berrysmod:blocks/crusher_top",
+    "side": "berrysmod:blocks/crusher_sides",
+    "down": "berrysmod:blocks/crusher_sides"
   }
 }
