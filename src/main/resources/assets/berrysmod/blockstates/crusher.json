@@ -4,15 +4,30 @@
       "model": "berrysmod:block/crusher",
       "y": 90
     },
+    "facing=east,lit=true": {
+      "model": "berrysmod:block/crusher_on",
+      "y": 90
+    },
     "facing=north,lit=false": {
       "model": "berrysmod:block/crusher"
+    },
+    "facing=north,lit=true": {
+      "model": "berrysmod:block/crusher_on"
     },
     "facing=south,lit=false": {
       "model": "berrysmod:block/crusher",
       "y": 180
     },
+    "facing=south,lit=true": {
+      "model": "berrysmod:block/crusher_on",
+      "y": 180
+    },
     "facing=west,lit=false": {
       "model": "berrysmod:block/crusher",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "berrysmod:block/crusher_on",
       "y": 270
     }
   }
