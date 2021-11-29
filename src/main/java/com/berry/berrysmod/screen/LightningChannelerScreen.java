@@ -12,7 +12,7 @@ import net.minecraft.util.text.ITextComponent;
 import javax.sound.midi.Receiver;
 
 public class LightningChannelerScreen extends ContainerScreen<LightningChannelerContainer> {
-    private final ResourceLocation GUI = new ResourceLocation(BerrysMod.MOD_ID,
+    private final ResourceLocation LCGUI = new ResourceLocation(BerrysMod.MOD_ID,
             "textures/gui/lightning_channeler_gui.png");
 
     public LightningChannelerScreen(LightningChannelerContainer screenContainer, PlayerInventory inv, ITextComponent titleIn) {
@@ -29,7 +29,7 @@ public class LightningChannelerScreen extends ContainerScreen<LightningChanneler
     @Override
     protected void drawGuiContainerBackgroundLayer(MatrixStack matrixStack, float partialTicks, int x, int y) {
         RenderSystem.color4f(1f, 1f, 1f, 1f);
-        this.minecraft.getTextureManager().bindTexture(GUI);
+        this.minecraft.getTextureManager().bindTexture(LCGUI);
         int i = this.guiLeft;
         int j = this.guiTop;
         this.blit(matrixStack, i, j, 0, 0, this.xSize, this.ySize);

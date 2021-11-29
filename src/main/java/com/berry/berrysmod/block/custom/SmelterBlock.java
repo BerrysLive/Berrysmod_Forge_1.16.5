@@ -27,16 +27,24 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
+import net.minecraftforge.items.IItemHandler;
 
 import javax.annotation.Nullable;
 
 public class SmelterBlock extends Block {
+    private final TileEntity tileEntity;
+    private final PlayerEntity playerEntity;
+    private final IItemHandler playerInventory;
+
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
-    public SmelterBlock(Properties properties) {
+    public SmelterBlock(Properties properties, TileEntity tileEntity, PlayerEntity playerEntity, IItemHandler playerInventory) {
         super(Properties.create(Material.IRON, MaterialColor.GRAY).hardnessAndResistance(10f)
                 .sound(SoundType.METAL).harvestLevel(4));
+        this.tileEntity = tileEntity;
+        this.playerEntity = playerEntity;
+        this.playerInventory = playerInventory;
         this.setDefaultState(
                 this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(LIT, false));
     }

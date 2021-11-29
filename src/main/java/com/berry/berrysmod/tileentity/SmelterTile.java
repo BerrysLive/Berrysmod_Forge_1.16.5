@@ -1,7 +1,9 @@
 package com.berry.berrysmod.tileentity;
 
+import com.berry.berrysmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
@@ -51,7 +53,7 @@ public class SmelterTile extends TileEntity {
 //                switch (slot){
 //                    case 0:return stack.getItem()== Items.GLASS_PANE;
 //                    case 1:
-//                        return stack.getItem()== ModItems.COPPER_INGOT.get() || stack.getItem()==ModItems.WIRE_CUTTERS.get();
+//                        return stack.getItem()== ModItems.COPPER_INGOT.get() || stack.getItem()== ModItems.WIRE_CUTTERS.get();
 //                    default:
 //                        return false;
 //                }

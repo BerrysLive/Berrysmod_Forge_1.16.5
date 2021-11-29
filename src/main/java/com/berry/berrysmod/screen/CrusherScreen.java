@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class CrusherScreen extends ContainerScreen<CrusherContainer> {
-    private final ResourceLocation GUI = new ResourceLocation(BerrysMod.MOD_ID,
+    private final ResourceLocation CrusherGUI = new ResourceLocation(BerrysMod.MOD_ID,
             "textures/gui/crusher_gui.png");
 
     public CrusherScreen(CrusherContainer screenContainer , PlayerInventory inv, ITextComponent titleIn) {
@@ -27,10 +27,9 @@ public class CrusherScreen extends ContainerScreen<CrusherContainer> {
     @Override
     protected void drawGuiContainerBackgroundLayer(MatrixStack matrixStack, float partialTicks, int x, int y) {
         RenderSystem.color4f(1f, 1f, 1f, 1f);
-        this.minecraft.getTextureManager().bindTexture(GUI);
+        this.minecraft.getTextureManager().bindTexture(CrusherGUI);
         int i = this.guiLeft;
         int j = this.guiTop;
         this.blit(matrixStack, i, j, 0, 0, this.xSize, this.ySize);
-
     }
 }

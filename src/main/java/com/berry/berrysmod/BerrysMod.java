@@ -3,7 +3,9 @@ package com.berry.berrysmod;
 import com.berry.berrysmod.block.ModBlocks;
 import com.berry.berrysmod.container.ModContainers;
 import com.berry.berrysmod.item.ModItems;
+import com.berry.berrysmod.screen.CrusherScreen;
 import com.berry.berrysmod.screen.LightningChannelerScreen;
+import com.berry.berrysmod.screen.SmelterScreen;
 import com.berry.berrysmod.tileentity.ModTileEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -65,6 +67,9 @@ public class BerrysMod
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         ScreenManager.registerFactory(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), LightningChannelerScreen::new);
+        ScreenManager.registerFactory(ModContainers.CRUSHER_CONTAINER.get(), CrusherScreen::new);
+        ScreenManager.registerFactory(ModContainers.SMELTER_CONTAINER.get(), SmelterScreen::new);
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)

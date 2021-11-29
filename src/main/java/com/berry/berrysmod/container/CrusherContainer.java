@@ -26,12 +26,13 @@ public class CrusherContainer extends Container {
         this.tileEntity = world.getTileEntity(pos);
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
-        layoutPlayerInventorySlots(8, 86);
+        layoutPlayerInventorySlots(8, 84);
 
         if (tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-                addSlot(new SlotItemHandler(h, 0, 80, 31));
-                addSlot(new SlotItemHandler(h, 1, 80, 53));
+                addSlot(new SlotItemHandler(h, 0, 80, 17));
+                addSlot(new SlotItemHandler(h, 0, 80, 53));
+
             });
         }
     }

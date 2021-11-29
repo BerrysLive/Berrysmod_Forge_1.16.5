@@ -10,7 +10,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
 public class SmelterScreen extends ContainerScreen<SmelterContainer> {
-    private final ResourceLocation GUI = new ResourceLocation(BerrysMod.MOD_ID,
+    private final ResourceLocation SmelterGUI = new ResourceLocation(BerrysMod.MOD_ID,
             "textures/gui/crusher_gui.png");
 
     public SmelterScreen(SmelterContainer screenContainer , PlayerInventory inv, ITextComponent titleIn) {
@@ -27,7 +27,7 @@ public class SmelterScreen extends ContainerScreen<SmelterContainer> {
     @Override
     protected void drawGuiContainerBackgroundLayer(MatrixStack matrixStack, float partialTicks, int x, int y) {
         RenderSystem.color4f(1f, 1f, 1f, 1f);
-        this.minecraft.getTextureManager().bindTexture(GUI);
+        this.minecraft.getTextureManager().bindTexture(SmelterGUI);
         int i = this.guiLeft;
         int j = this.guiTop;
         this.blit(matrixStack, i, j, 0, 0, this.xSize, this.ySize);
