@@ -3,6 +3,7 @@ package com.berry.berrysmod.block;
 import com.berry.berrysmod.BerrysMod;
 import com.berry.berrysmod.block.custom.CrusherBlock;
 import com.berry.berrysmod.block.custom.LightningChannelerBlock;
+import com.berry.berrysmod.block.custom.SmelterBlock;
 import com.berry.berrysmod.item.ModItemGroup;
 import com.berry.berrysmod.item.ModItems;
 import net.minecraft.block.AbstractBlock;
@@ -39,12 +40,23 @@ public class ModBlocks {
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
     //--------------------------------------------------------------------------------------------------------------------
+    //Lead
+    public static final RegistryObject<Block> LEAD_ORE = registerBlock("lead_ore",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
+    public static final RegistryObject<Block> LEAD_BLOCK = registerBlock("lead_block",
+            () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
+                    .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
+    //--------------------------------------------------------------------------------------------------------------------
     //Machine Stuff
     public static final RegistryObject<Block> BASIC_MACHINE_CASING = registerBlock("basic_machine_casing",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(5f)));
+
     public static final RegistryObject<Block> CRUSHER = registerBlock("crusher",
             () -> new CrusherBlock(AbstractBlock.Properties.create(Material.IRON)));
+    public static final RegistryObject<Block> SMELTER = registerBlock("smelter",
+            () -> new SmelterBlock(AbstractBlock.Properties.create(Material.IRON)));
     //--------------------------------------------------------------------------------------------------------------------
     //MISC
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",

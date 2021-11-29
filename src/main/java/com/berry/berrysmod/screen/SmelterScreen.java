@@ -1,7 +1,7 @@
 package com.berry.berrysmod.screen;
 
 import com.berry.berrysmod.BerrysMod;
-import com.berry.berrysmod.container.CrusherContainer;
+import com.berry.berrysmod.container.SmelterContainer;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -9,11 +9,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 
-public class CrusherScreen extends ContainerScreen<CrusherContainer> {
+public class SmelterScreen extends ContainerScreen<SmelterContainer> {
     private final ResourceLocation GUI = new ResourceLocation(BerrysMod.MOD_ID,
             "textures/gui/crusher_gui.png");
 
-    public CrusherScreen(CrusherContainer screenContainer , PlayerInventory inv, ITextComponent titleIn) {
+    public SmelterScreen(SmelterContainer screenContainer , PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);
     }
 

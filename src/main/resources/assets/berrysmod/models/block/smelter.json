@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/orientable",
   "textures": {
-    "front": "berrysmod:block/crusher_front",
-    "top": "berrysmod:block/crusher_top",
+    "front": "berrysmod:block/smelter_front",
+    "top": "berrysmod:block/crusher_sides",
     "side": "berrysmod:block/crusher_sides",
     "down": "berrysmod:block/crusher_sides"
   }

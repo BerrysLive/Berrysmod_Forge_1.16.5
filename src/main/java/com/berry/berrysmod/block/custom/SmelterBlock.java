@@ -1,9 +1,8 @@
 package com.berry.berrysmod.block.custom;
 
-import com.berry.berrysmod.container.CrusherContainer;
-import com.berry.berrysmod.tileentity.CrusherTile;
+import com.berry.berrysmod.container.SmelterContainer;
+import com.berry.berrysmod.tileentity.SmelterTile;
 import com.berry.berrysmod.tileentity.ModTileEntities;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
@@ -27,17 +26,16 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkHooks;
 
 import javax.annotation.Nullable;
 
-public class CrusherBlock extends Block {
+public class SmelterBlock extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public static final BooleanProperty LIT = BooleanProperty.create("lit");
 
-    public CrusherBlock(Properties properties) {
-        super(AbstractBlock.Properties.create(Material.IRON, MaterialColor.GRAY).hardnessAndResistance(10f)
+    public SmelterBlock(Properties properties) {
+        super(Properties.create(Material.IRON, MaterialColor.GRAY).hardnessAndResistance(10f)
                 .sound(SoundType.METAL).harvestLevel(4));
         this.setDefaultState(
                 this.stateContainer.getBaseState().with(FACING, Direction.NORTH).with(LIT, false));
@@ -53,7 +51,7 @@ public class CrusherBlock extends Block {
                                              PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote()) {
             TileEntity tileEntity = worldIn.getTileEntity(pos);
-            if (tileEntity instanceof CrusherTile) {
+            if (tileEntity instanceof SmelterTile) {
                 INamedContainerProvider containerProvider = createContainerProvider(worldIn, pos);
                 NetworkHooks.openGui(((ServerPlayerEntity) player), containerProvider, tileEntity.getPos());
             } else {
@@ -67,13 +65,13 @@ public class CrusherBlock extends Block {
         return new INamedContainerProvider() {
             @Override
             public ITextComponent getDisplayName() {
-                return new TranslationTextComponent("screen.berrysmod.crusher");
+                return new TranslationTextComponent("screen.berrysmod.smelter");
             }
 
             @Nullable
             @Override
             public Container createMenu(int i, PlayerInventory playerInventory, PlayerEntity playerEntity) {
-                return new CrusherContainer(i, worldIn, pos, playerInventory, playerEntity);
+                return new SmelterContainer(i, worldIn, pos, playerInventory, playerEntity);
             }
         };
     }
@@ -81,7 +79,7 @@ public class CrusherBlock extends Block {
     @Nullable
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return ModTileEntities.CRUSHER_TILE.get().create();
+        return ModTileEntities.SMELTER_TILE.get().create();
     }
 
     @Override

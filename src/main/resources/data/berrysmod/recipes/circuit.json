@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[
+    "YXY",
+    "Z#Z",
+    "YXY"
+  ],
+  "key": {
+    "#":{
+      "item": "berrysmod:tin_ingot"
+    },
+    "X":{
+      "item": "minecraft:redstone"
+    },
+    "Z":{
+      "item": "berrysmod:copper_wire"
+    },
+    "Y":{
+      "item": "berrysmod:copper_ingot"
+    }
+  },
+  "result": {
+    "item": "berrysmod:circuit"
+  }
+}

@@ -35,6 +35,15 @@ public class ModItems {
     public static final RegistryObject<Item> TIN_DUST = ITEMS.register("tin_dust",
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
     //--------------------------------------------------------------------------------------------------------------------
+    //Tin
+    public static final RegistryObject<Item> LEAD_INGOT = ITEMS.register("lead_ingot",
+            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+
+    public static final RegistryObject<Item> RAW_LEAD = ITEMS.register("raw_lead",
+            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+    public static final RegistryObject<Item> LEAD_DUST = ITEMS.register("lead_dust",
+            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+    //--------------------------------------------------------------------------------------------------------------------
     //Steel
     public static final RegistryObject<Item> STEEL_INGOT = ITEMS.register("steel_ingot",
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));

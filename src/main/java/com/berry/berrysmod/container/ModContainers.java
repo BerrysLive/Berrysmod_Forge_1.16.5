@@ -22,12 +22,20 @@ public class ModContainers {
                 return new LightningChannelerContainer(windowId, world, pos, inv, inv.player);
             })));
 
-    public static final RegistryObject<ContainerType<LightningChannelerContainer>> CRUSHER_CONTAINER =
+    public static final RegistryObject<ContainerType<CrusherContainer>> CRUSHER_CONTAINER =
             CONTAINERS.register("crusher_container", () -> IForgeContainerType.create(((windowId, inv,
                                                                                         data) -> {
                 BlockPos pos = data.readBlockPos();
                 World world = inv.player.getEntityWorld();
-                return new LightningChannelerContainer(windowId, world, pos, inv, inv.player);
+                return new CrusherContainer(windowId, world, pos, inv, inv.player);
+            })));
+
+    public static final RegistryObject<ContainerType<SmelterContainer>> SMELTER_CONTAINER =
+            CONTAINERS.register("smelter_container", () -> IForgeContainerType.create(((windowId, inv,
+                                                                                        data) -> {
+                BlockPos pos = data.readBlockPos();
+                World world = inv.player.getEntityWorld();
+                return new SmelterContainer(windowId, world, pos, inv, inv.player);
             })));
 
     public static void register(IEventBus eventBus) {

@@ -4,32 +4,31 @@ import com.berry.berrysmod.block.ModBlocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IWorldPosCallable;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-public class LightningChannelerContainer extends Container {
+public class SmelterContainer extends Container {
     private final TileEntity tileEntity;
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
 
-    public LightningChannelerContainer(int windowId, World world, BlockPos pos,
-                                       PlayerInventory playerInventory, PlayerEntity player) {
-        super(ModContainers.LIGHTNING_CHANNELER_CONTAINER.get(), windowId);
+    public SmelterContainer(int windowId, World world, BlockPos pos,
+                            PlayerInventory playerInventory, PlayerEntity player) {
+        super(ModContainers.SMELTER_CONTAINER.get(), windowId);
         this.tileEntity = world.getTileEntity(pos);
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
         layoutPlayerInventorySlots(8, 86);
 
-        if(tileEntity != null) {
+        if (tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
                 addSlot(new SlotItemHandler(h, 0, 80, 31));
                 addSlot(new SlotItemHandler(h, 1, 80, 53));
@@ -37,14 +36,11 @@ public class LightningChannelerContainer extends Container {
         }
     }
 
-    public boolean isLightningStorm() {
-        return tileEntity.getWorld().isThundering();
-    }
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
         return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()),
-                playerIn, ModBlocks.LIGHTNING_CHANNELER.get());
+                playerIn, ModBlocks.SMELTER.get());
     }
 
 

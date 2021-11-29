@@ -21,6 +21,10 @@ public class ModTileEntities {
             TILE_ENTITIES.register("crusher_tile",
                     () -> TileEntityType.Builder.create(CrusherTile::new,
                             ModBlocks.CRUSHER.get()).build(null));
+    public static RegistryObject<TileEntityType<CrusherTile>> SMELTER_TILE =
+            TILE_ENTITIES.register("smelter_tile",
+                    () -> TileEntityType.Builder.create(CrusherTile::new,
+                            ModBlocks.SMELTER.get()).build(null));
 
 
     public static void register(IEventBus eventBus) {

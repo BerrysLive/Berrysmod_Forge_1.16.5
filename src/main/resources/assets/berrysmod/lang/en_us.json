@@ -13,18 +13,26 @@
   "item.berrysmod.raw_tin": "Raw Tin",
   "item.berrysmod.tin_dust": "Tin Dust",
 
+  "block.berrysmod.lead_ore": "Lead Ore",
+  "block.berrysmod.lead_block": "Lead Block",
+  "item.berrysmod.lead_ingot": "Lead Ingot",
+  "item.berrysmod.raw_lead": "Raw Lead",
+  "item.berrysmod.lead_dust": "Lead Dust",
+
 
   "item.berrysmod.steel_ingot": "Steel Ingot",
 
   "item.berrysmod.iron_rod": "Iron Rod",
 
   "block.berrysmod.basic_machine_casing": "Basing Machine Casing",
-  "block.berrysmod.crusher": "Crusher",
   "item.berrysmod.circuit": "Circuit",
   "item.berrysmod.wire_cutters": "Wire Cutters",
 
   "block.berrysmod.crusher": "Crusher",
   "screen.berrysmod.crusher": "Crusher",
+
+  "block.berrysmod.smelter": "Smelter",
+  "screen.berrysmod.smelter": "Smelter",
 
   "block.berrysmod.lightning_channeler": "Lightning Channeler",
   "screen.berrysmod.lightning_channeler": "Lightning Channeler",

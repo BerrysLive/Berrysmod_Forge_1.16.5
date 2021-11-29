@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "berrysmod:copper_dust"
+  },
+  "result": "berrysmod:copper_ingot",
+  "experience": 0.7,
+  "cookingTime": 200
+}
