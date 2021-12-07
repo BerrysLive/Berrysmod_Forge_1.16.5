@@ -2,6 +2,7 @@ package com.berry.berrysmod;
 
 import com.berry.berrysmod.block.ModBlocks;
 import com.berry.berrysmod.container.ModContainers;
+import com.berry.berrysmod.data.recipes.ModRecipeTypes;
 import com.berry.berrysmod.item.ModItems;
 import com.berry.berrysmod.screen.CrusherScreen;
 import com.berry.berrysmod.screen.LightningChannelerScreen;
@@ -44,6 +45,7 @@ public class BerrysMod
         ModBlocks.register(eventBus);
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
+        ModRecipeTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

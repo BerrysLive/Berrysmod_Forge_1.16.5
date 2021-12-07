@@ -1,10 +1,14 @@
 package com.berry.berrysmod.tileentity;
 
+import com.berry.berrysmod.data.recipes.CrusherRecipe;
+import com.berry.berrysmod.data.recipes.ModRecipeTypes;
 import com.berry.berrysmod.item.ModItems;
 import net.minecraft.block.BlockState;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
@@ -16,8 +20,9 @@ import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import java.util.Optional;
 
-public class SmelterTile extends TileEntity {
+public class SmelterTile extends TileEntity implements ITickableTileEntity {
     private final ItemStackHandler itemHandler = createHandler();
     private final LazyOptional<IItemHandler> handler = LazyOptional.of(()->itemHandler);
 
@@ -42,7 +47,8 @@ public class SmelterTile extends TileEntity {
     }
 
     private ItemStackHandler createHandler(){
-        return new ItemStackHandler(2){
+        //Determines how many slots are in the machine
+        return new ItemStackHandler(3){
             @Override
             protected void onContentsChanged(int slot) {
                 markDirty();
@@ -60,10 +66,11 @@ public class SmelterTile extends TileEntity {
                 return true;
             }
 
-            @Override
-            public int getSlotLimit(int slot) {
-                return 1;
-            }
+//            @Override
+//            public int getSlotLimit(int slot) {
+//                return 1;
+//            }
+//            Not Useful
 
             @Nonnull
             @Override
@@ -85,5 +92,21 @@ public class SmelterTile extends TileEntity {
         return super.getCapability(cap, side);
     }
 
+    private void craft(){
+        Inventory inv = new Inventory(itemHandler.getSlots());
+        for (int i = 0; i < itemHandler.getSlots(); i++) {
+            inv.setInventorySlotContents(i,itemHandler.getStackInSlot(i));
+        }
+        Optional<CrusherRecipe> recipe = world.getRecipeManager().getRecipe(ModRecipeTypes.CRUSHER_RECIPE, inv, world);
+
+    }
+
+    @Override
+    public void tick() {
+        if(world.isRemote) {
+            return;
+        }
+        craft();
+    }
 }
 

@@ -1,0 +1,12 @@
+{
+  "type": "berrysmod:crusher",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ore"
+    }
+  ],
+  "output": {
+    "item": "berrysmod:iron_dust",
+    "count": 2
+  }
+}

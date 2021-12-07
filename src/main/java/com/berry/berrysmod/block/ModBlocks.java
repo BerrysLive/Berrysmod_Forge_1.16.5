@@ -57,7 +57,7 @@ public class ModBlocks {
             () -> new CrusherBlock(AbstractBlock.Properties.create(Material.IRON)));
 
     public static final RegistryObject<Block> SMELTER = registerBlock("smelter",
-            () -> new CrusherBlock(AbstractBlock.Properties.create(Material.IRON)));
+            () -> new SmelterBlock(AbstractBlock.Properties.create(Material.IRON)));
     //--------------------------------------------------------------------------------------------------------------------
     //MISC
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",

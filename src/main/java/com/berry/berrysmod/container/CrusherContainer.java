@@ -31,7 +31,7 @@ public class CrusherContainer extends Container {
         if (tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
                 addSlot(new SlotItemHandler(h, 0, 80, 17));
-                addSlot(new SlotItemHandler(h, 0, 80, 53));
+                addSlot(new SlotItemHandler(h, 1, 80, 53));
 
             });
         }

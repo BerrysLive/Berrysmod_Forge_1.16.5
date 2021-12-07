@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[
+    "IWI",
+    "RMR",
+    "FCF"
+  ],
+  "key": {
+    "M":{
+      "item": "berrysmod:basic_machine_casing"
+    },
+    "I":{
+      "item": "berrysmod:iron_rod"
+    },
+    "W":{
+      "item": "berrysmod:copper_wire"
+    },
+    "R":{
+      "item": "minecraft:redstone"
+    },
+    "F":{
+      "item": "minecraft:flint_and_steel"
+    },
+    "C":{
+      "item": "berrysmod:circuit"
+    }
+  },
+  "result": {
+    "item": "berrysmod:smelter"
+  }
+}

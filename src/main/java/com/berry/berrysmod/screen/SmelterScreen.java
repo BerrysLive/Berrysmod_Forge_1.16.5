@@ -11,7 +11,7 @@ import net.minecraft.util.text.ITextComponent;
 
 public class SmelterScreen extends ContainerScreen<SmelterContainer> {
     private final ResourceLocation SmelterGUI = new ResourceLocation(BerrysMod.MOD_ID,
-            "textures/gui/crusher_gui.png");
+            "textures/gui/smelter_gui.png");
 
     public SmelterScreen(SmelterContainer screenContainer , PlayerInventory inv, ITextComponent titleIn) {
         super(screenContainer, inv, titleIn);

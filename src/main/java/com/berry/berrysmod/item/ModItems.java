@@ -51,6 +51,8 @@ public class ModItems {
     //Iron
     public static final RegistryObject<Item> IRON_ROD = ITEMS.register("iron_rod",
             ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
+    public static final RegistryObject<Item> IRON_DUST = ITEMS.register("iron_dust",
+            ()->new Item(new Item.Properties().group(ModItemGroup.BERRYSMOD_GROUP)));
     //--------------------------------------------------------------------------------------------------------------------
     //Tools
     public static final RegistryObject<Item> WIRE_CUTTERS = ITEMS.register("wire_cutters",
